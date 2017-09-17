@@ -13,7 +13,9 @@ public class Main {
             String first = new String();
             double first_arg = 0;
             double second_arg = 0;
+            double result = 0;
             first = sc.next();
+
 
             if (first.equals("quit")){
                 break;
@@ -38,7 +40,7 @@ public class Main {
             if (delimitier.equals("+") || delimitier.equals("-")||delimitier.equals("*") || delimitier.equals("/")){
 
             }else {
-                System.out.println("Delimities isn't valid, please, start typing again");
+                System.out.println("Delimitier isn't valid, please, start typing again");
                 continue;
             }
 
@@ -58,9 +60,6 @@ public class Main {
                 System.out.println("Second arguement is not a number, please, start typing again");
                 continue;
             }
-
-
-            double result = 0;
 
 
             switch (delimitier){

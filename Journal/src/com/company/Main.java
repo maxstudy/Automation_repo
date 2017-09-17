@@ -67,4 +67,5 @@ public class Main {
         System.out.println("Average mark -- " + avg_mark);
 
     }
+
 }
