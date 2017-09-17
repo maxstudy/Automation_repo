@@ -6,6 +6,11 @@ public class Student {
 
     private String name;
 
+    private String lastname;
+
+    private int ticket_id;
+
+
     public int getStudent_id() {
         return student_id;
     }
@@ -14,7 +19,6 @@ public class Student {
         this.student_id = student_id;
     }
 
-    private String lastname;
 
     public String getName() {
         return name;
@@ -32,5 +36,11 @@ public class Student {
         this.lastname = lastname;
     }
 
+    public int getTicket_id() {
+        return ticket_id;
+    }
 
+    public void setTicket_id(int ticket_id) {
+        this.ticket_id = ticket_id;
+    }
 }
