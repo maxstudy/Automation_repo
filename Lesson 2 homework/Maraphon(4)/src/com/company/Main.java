@@ -13,13 +13,9 @@ public class Main {
         ArrayList<Runner> runners = new ArrayList<Runner>();
 
         runners = model.setRunners();
-
-
         runners = model.sort(runners);
+        model.view(runners);
 
-        for (int i = 0; i< runners.size();i++ ){
-            System.out.println(i+1 + " "+ runners.get(i).getName()+ " " + runners.get(i).getTime());
-        }
 
         Runner first = new Runner();
         first = model.search(runners, 2);

@@ -9,7 +9,7 @@ import java.util.ArrayList;
     private int[] time = { 341, 273, 278, 329, 445, 402, 388, 275, 243, 334, 412, 393, 299, 343, 317, 265 };
 
 
-    public ArrayList<Runner> setRunners() {
+     ArrayList<Runner> setRunners() {
 
          ArrayList<Runner> runners = new ArrayList<Runner>();
 
@@ -24,7 +24,7 @@ import java.util.ArrayList;
 return runners;
     }
 
-
+    //Sorry for bubble-sort, as Ivan said in slack -- we don't learn Comparator :)
     public ArrayList<Runner> sort(ArrayList<Runner> runner){
 
 
@@ -52,5 +52,11 @@ return runners;
         temp_runner = runners.get(number-1);
         return temp_runner;
     }
+
+    public void view(ArrayList<Runner> runners){
+        for (int i = 0; i< runners.size();i++ ){
+            System.out.println(i+1 + " "+ runners.get(i).getName()+ " " + runners.get(i).getTime());
+        }
+    };
 
 }

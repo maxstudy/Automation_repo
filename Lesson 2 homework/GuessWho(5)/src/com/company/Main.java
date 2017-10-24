@@ -8,16 +8,9 @@ import java.util.Scanner;
 public class Main {
 
 
-
-     static String replaceCharAt(String s, int pos, char c) {
-
-        return s.substring(0,pos) + c + s.substring(pos+1);
-
-    }
-
-
     public static void main(String[] args) {
-	System.out.println("Insert name and surname");
+	System.out.println("Welcome to GuessWho! Try to know my name and Surname! ");
+	System.out.println("Warning -- game is case sensitive!");
         Scanner sc = new Scanner(System.in);
         String layout = "Maxim Pipkin";
         String temp_layout = layout;
@@ -28,20 +21,20 @@ public class Main {
 
         System.out.println(cipher);
         while (iswin == false){
-            System.out.println("insert character or word");
+            System.out.println("Insert character or word:");
             Scanner sc1 = new Scanner(System.in);
             String temp = sc1.nextLine();
 
             Matcher matcher = regex.matcher(temp);
 
+            //Validation(regexp contain any alphabetic character)
             if (matcher.find()){
-                System.out.println("not a word, please, try again");
+                System.out.println("Not a word, please, try again.");
                 continue;
             }
 
-
             if (layout.indexOf(temp) == -1){
-                System.out.println("Character or word not found, please try again");
+                System.out.println("Character or word not found, please try again.");
                 continue;
             }
             if (cipher.indexOf(temp) != -1){
@@ -64,7 +57,7 @@ public class Main {
             if (cipher.equals(layout)){
 
                 iswin = true;
-                System.out.println("You win");
+                System.out.println("You win!!");
             }
 
             System.out.println(cipher);
@@ -74,4 +67,12 @@ public class Main {
 
         // write your code here
     }
+
+    //My function for char replace(it's kinda difficult to replace char in string by it's index)
+    static String replaceCharAt(String s, int pos, char c) {
+
+        return s.substring(0,pos) + c + s.substring(pos+1);
+
+    }
+
 }
