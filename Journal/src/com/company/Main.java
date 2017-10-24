@@ -1,3 +1,4 @@
+
 package com.company;
 import sun.util.resources.cldr.kea.TimeZoneNames_kea;
 
@@ -14,7 +15,7 @@ public class Main {
         String lastnames[] = {"Ivanov", "Petrov", "Sidorov", "Orlov", "Romanov", "Lavochkin", "Merkushev", "Nekrasov", "Zuev", "Kazakov", "Archipov", "Kondratyev", "Shiriaev"};
         String Questions[] = {"Q1","Q2","Q3","Q4","Q5","Q6","Q7","Q8","Q9", "Q10"};
 
-        int marks[] = new int[5];
+        int result[] = new int[5];
         float avg_mark = 0;
 
         //Students and tickets collections
@@ -43,7 +44,7 @@ public class Main {
             //Collection pushing
             students.add(temp_object);
             int rand_mark = ThreadLocalRandom.current().nextInt(1, 5 );
-            marks[i] = rand_mark;
+            result[i] = rand_mark;
             avg_mark+=rand_mark;
 
             //Output. It can be replaced to another cycle, but i think it isn't necessary
@@ -58,7 +59,7 @@ public class Main {
                                 + " Question "
                                 + tickets.get(students.get(i).getTicket_id()).getQuestion()
                                 + " -- "
-                                + marks[i]);
+                                + result[i]);
 
 
         }
