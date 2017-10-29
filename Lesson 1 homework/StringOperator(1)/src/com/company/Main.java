@@ -10,8 +10,12 @@ public class Main {
         Scanner io = new Scanner(System.in);
         String row = io.nextLine();
 
+
+        Thread first = new ExampleThread();
         Operator obj = new Operator();
+        first.start();
     System.out.println(obj.toRevert(row));
+  System.out.println(  first.getStackTrace());
     System.out.println(obj.toReplace(row));
     System.out.println(obj.toUpperCase(row));
     System.out.println(obj.toSubstr(row));
