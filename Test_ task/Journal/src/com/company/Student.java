@@ -1,6 +1,8 @@
 package com.company;
 
-public class Student {
+import javax.swing.text.Style;
+
+public class Student  implements Comparable<Student> {
 
     private int student_id;
 
@@ -42,5 +44,11 @@ public class Student {
 
     public void setTicket_id(int ticket_id) {
         this.ticket_id = ticket_id;
+    }
+
+
+
+    public int compareTo(Student student) {
+        //write code here for compare name
     }
 }
