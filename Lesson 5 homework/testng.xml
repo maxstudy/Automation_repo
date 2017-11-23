@@ -1,7 +1,7 @@
 <suite name = "Suite1">
     <test name = "test1">
         <classes>
-            <class name = "com.company.CalcTest" />
+            <class name = "com.company.OperationsTest" />
         </classes>
     </test>
 </suite>
