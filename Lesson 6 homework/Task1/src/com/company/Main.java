@@ -11,15 +11,6 @@ import java.util.logging.Logger;
 public class Main {
 
     public static void main(String[] args) {
-	WebDriver driver = new SafariDriver();
-	driver.get("https://catalog.onliner.by");
-	//driver.manage().window().maximize();
-	WebElement button = driver.findElement(By.xpath("//a[text()='Мобильные телефоны']"));
-	button.click();
-
-
-	//List<WebElement> link_to_phone = driver.findElements(By.xpath("//a[.'schema-product__title']"));
-//driver.close();
 
     }
 }
