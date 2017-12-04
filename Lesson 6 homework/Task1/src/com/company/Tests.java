@@ -34,23 +34,25 @@ public class Tests {
 
         mobile_links.click();
 
-        WebElement cart_button  = driver.findElement(By.className("product-aside__item-button"));
-        cart_button.click();
+        WebElement offers  = driver.findElement(By.className("button_orange"));
+        offers.click();
+
+        WebElement  addToCart = driver.findElement(By.xpath("//a[@data-shop-id='7965']"));
+        addToCart.click();
+
         WebDriverWait wait2 = new WebDriverWait(driver,15);
+
+
 
         JavascriptExecutor jse = (JavascriptExecutor)driver;
        jse.executeScript("document.evaluate('//*[@id=\"b-top-navigation-cart\"]/li/a/span', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.click();");
 
-       WebElement name = driver.findElement());
- String actual =  name.getText();
-Assert.assertEquals(actual, "Xiaomi Redmi 4X 16GB Black");
-    //      WebElement cart_link = driver.findElement(By.xpath("//*[@id=\"b-top-navigation-cart\"]/li/a/span"));
-    //    cart_link.click();
+        WebElement basket = driver.findElement(By.xpath("//div[@class='cart-product-title']"));
 
-    //   mobile_links.get(0).sendKeys("Iphone");
+       String actual =  basket.getText();
+        Assert.assertEquals(actual, "Xiaomi Redmi 4X 16GB Black");
 
-
-   //    driver.close();
+       driver.close();
 
     }
 
